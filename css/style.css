@@ -1,0 +1,75 @@
+/* .header {
+
+}
+
+.main {
+
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cards{
+
+}
+
+.button {
+
+}
+
+.card-ttl {
+
+}
+
+.card-stats {
+
+}
+
+body{
+
+}
+
+.test{
+
+} */
+
+/* .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    background-color: red;
+}
+
+.settings{
+    background-color: blue;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column: 1;
+    grid-row: 4;
+} */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .one {
+    grid-column: 1;
+    grid-row: 1 / 10;
+    background-color: green;
+  }
+  .two {
+    grid-column: 2 / 4;
+    grid-row: 1 / 9;
+    background-color: gray
+  }
+  .three {
+    grid-column: 1;
+    grid-row: 1 / 10;
+    background-color: green;
+  }
+
+  
