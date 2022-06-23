@@ -1,17 +1,41 @@
+let charactersList = document.createElement("div")
 
 try {
-  fetch("https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/id/1.json")
+  fetch("https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json")
     .then(response => response.json())
     .then(heroes => {
-      console.log(heroes.name,heroes.powerstats,heroes.images.xs,heroes.biography.publisher)
-    })
-// const name = json.
+      heroes.forEach(hero => {
+        let character = document.createElement("div")
+        const name = hero.name
+        character.innerHTML += `<p>${name}</p>`
+
+        const img = document.createElement("img")
+        img.src = hero.images.md
+        character.appendChild(img)
+
+        let stats = document.createElement("ul")
+        let universe = document.createElement("p")
+        universe.innerHTML = hero.biography.publisher
+
+        character.appendChild(universe)
+        for (const stat in hero.powerstats) {
+          stats.innerHTML += `<li>${stat}:${hero.powerstats[stat]}</li>`
+
+        }
+        character.appendChild(stats)
+
     
+        charactersList.appendChild(character)
+      });
+    })
+  document.body.appendChild(charactersList)
+  // const name = json.
+
 } catch (error) {
   console.error("Something went wrong : " + error);
 }
 
-
+//const =[]
 
 
 
