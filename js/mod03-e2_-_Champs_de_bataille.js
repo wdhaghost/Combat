@@ -25,7 +25,7 @@ try {
         character.appendChild(stats)
 
     
-        charactersList.appendChild(character)
+       charactersList.appendChild(character)
       });
     })
   document.body.appendChild(charactersList)
@@ -35,7 +35,7 @@ try {
   console.error("Something went wrong : " + error);
 }
 
-//const =[]
+
 
 
 
