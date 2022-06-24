@@ -7,7 +7,31 @@
   
   .main { 
     background-color: #26474E;
-    grid-area: 1 / 1 / 7 / 6; 
+    grid-area: 1 / 1 / 7 / 6;
+    padding: 2%;
+    overflow: scroll;
+  }
+  .select-zone{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    width:100%;
+  }
+  .card{
+    background-color: white;
+    width:10%;
+    height: auto;
+    padding: 2%;
+    border-radius: 10px;
+  }
+
+  .card-img{
+    height: auto;
+    width: 100%;
+  }
+  .card-stat{
+    display:none;
   }
 
   .header { 

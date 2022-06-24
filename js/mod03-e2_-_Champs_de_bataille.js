@@ -1,4 +1,4 @@
-let charactersList = document.createElement("div")
+let charactersList = document.getElementById("select-zone");
 
 try {
   fetch("https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json")
@@ -8,28 +8,30 @@ try {
         let character = document.createElement("div")
         const name = hero.name
         character.innerHTML += `<p>${name}</p>`
-
+        character.classList.add("card")
+        
         const img = document.createElement("img")
         img.src = hero.images.md
+        img.classList.add("card-img")
         character.appendChild(img)
 
         let stats = document.createElement("ul")
         let universe = document.createElement("p")
         universe.innerHTML = hero.biography.publisher
+        
 
         character.appendChild(universe)
         for (const stat in hero.powerstats) {
           stats.innerHTML += `<li>${stat}:${hero.powerstats[stat]}</li>`
 
         }
+        stats.classList.add("card-stat")
         character.appendChild(stats)
 
     
        charactersList.appendChild(character)
       });
     })
-  document.body.appendChild(charactersList)
-  // const name = json.
 
 } catch (error) {
   console.error("Something went wrong : " + error);
