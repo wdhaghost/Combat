@@ -9,7 +9,7 @@ try {
         const name = hero.name
         character.innerHTML += `<p>${name}</p>`
         character.classList.add("card")
-        
+
         const img = document.createElement("img")
         img.src = hero.images.md
         img.classList.add("card-img")
@@ -17,8 +17,8 @@ try {
 
         let stats = document.createElement("ul")
         let universe = document.createElement("p")
-        universe.innerHTML = hero.biography.publisher
-        
+        //universe.innerHTML = hero.biography.publisher
+
 
         character.appendChild(universe)
         for (const stat in hero.powerstats) {
@@ -28,16 +28,25 @@ try {
         stats.classList.add("card-stat")
         character.appendChild(stats)
 
-    
-       charactersList.appendChild(character)
+
+        charactersList.appendChild(character)
+
       });
+      const cards=document.querySelectorAll("#select-zone .card")
+      for (const card of cards) {
+       card.addEventListener("click",function(event){
+        
+      }) 
+      }
+      
+
+
+
     })
 
 } catch (error) {
   console.error("Something went wrong : " + error);
 }
-
-
 
 
 

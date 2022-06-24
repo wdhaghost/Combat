@@ -16,13 +16,17 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
-    width:100%;
+    width: 80%;
   }
+  .stat-zone{
+    width: 20%;
+  }
+
   .card{
     background-color: white;
     width:10%;
     height: auto;
-    padding: 2%;
+    padding: 1% 2%;
     border-radius: 10px;
   }
 
