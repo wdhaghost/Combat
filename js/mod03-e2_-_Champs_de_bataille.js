@@ -49,6 +49,10 @@ try {
 }
 
 
+let yourHero = document.getElementsByClassName('card');
+console.log(yourHero);
+
+
 
 // function getRandomValues(max) {
 //   return parseInt(Math.random() * max);
@@ -121,3 +125,5 @@ try {
 // battle(characters);
 // console.log()
 // console.table(characters);
+
+
