@@ -44,14 +44,19 @@
   
   .select-zone{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
     width: 80%;
     height: 100%;
     padding-top: 10%;
   }
-  
+  .list {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style-type: none;
+    
+}
+
   .card{
     background-color: rgb(108, 108, 108);
     width:80px;
@@ -72,28 +77,6 @@
     width: auto;
   }
   
-
-/* CONTENT HEROES */
-
-.select-zone{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
-  width: 80%;
-  height: 50vh;
-}
-
-.card{
-  background-color: rgb(108, 108, 108);
-  width:10%;
-  height: auto;
-  padding: 1% 2%;
-  border-radius: 10px;
-  border:1px solid rgb(255, 255, 255) ;
-}
-
-
   .stat-zone{
     width: 20%;
   }
