@@ -19,10 +19,6 @@ try {
 
         let stats = document.createElement("ul")
         
-        //universe.innerHTML 
-
-
-        character.appendChild(universe)
         for (const stat in hero.powerstats) {
           stats.innerHTML += `<li>${stat}:${hero.powerstats[stat]}</li>`
 
