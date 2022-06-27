@@ -5,7 +5,7 @@ try {
     .then(response => response.json())
     .then(heroes => {
       heroes.forEach(hero => {
-        let character = document.createElement("div")
+        let character = document.createElement("li")
         const name = hero.name
         character.setAttribute("data-id",hero.id)
         character.setAttribute("data-universe",hero.biography.publisher)
