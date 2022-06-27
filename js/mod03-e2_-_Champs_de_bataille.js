@@ -54,24 +54,37 @@ try {
 
 
       })
-    // get 4 random players
+      // get 4 random players
       document.getElementById("random").addEventListener("click", function (e) {
-        selectedHero.innerHTML=""
+        selectedHero.innerHTML = ""
         for (let i = 0; i < 4; i++) {
-          const randomNum=parseInt(Math.random()*selectZone.children.length) ;
+          const randomNum = parseInt(Math.random() * selectZone.children.length);
           selectedHero.appendChild(selectZone.childNodes[randomNum])
-        }}
-)
+        }
+      }
+      )
+
+      document.getElementById("fight").addEventListener("click", function (e) {
+       
+          document.getElementById("arena").classList.add("fight")
+          document.getElementById("character-menu").classList.add("fight")
+          document.getElementById("footer").classList.add("fight")
+          let index=0;
+          selectedHero.array.forEach(fighter => {
+            document.getElementById("fight-zone").appendChild(fighter)
+
+          });
+           
+          }
+        
+      }
+      )
 
 
     })
 
 } catch (error) {
   console.error("Something went wrong : " + error);
-}
-
-function random() {
-
 }
 
 

@@ -13,7 +13,9 @@
     height: 100%;
   }
   .arena.fight{
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
   .main { 
     
@@ -86,7 +88,9 @@
     display:none;
   }
   
-  
+  .card-stat.fight{
+    display:block;
+  }
 
   /* DISPLAY FIGHTERS */  
   .footer { 
