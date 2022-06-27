@@ -1,43 +1,51 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Combat</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Combat</title>
+</head>
+
+<body>
 
 
-    <div class="container">
-      <main class="main">
-        <div id ="select-zone" class="select-zone">
-
-          
+  <div class="container">
+    <main class="main">
+      <form class="form-section">
+        <div class="search-bar">
+          <label for="hero-search">search your hero</label>
+          <input type="search" id="hero-search" name="hs">
         </div>
-         <div class="card-hero-stats"></div>
-      </main>
+        <div id="category-filter"class="category-filter">
 
-      <div class="header"> Arena ?</div>
-
-      <footer class="footer">
-
-        <div class="selected-hero">
-          <div class="fighter">1</div>
-          <div class="fighter">2</div>
-          <div class="fighter">3</div>
-          <div class="fighter">4</div>
         </div>
-
-        <div>
-          <button></button>
-          <button></button>
-        </div>
+      </form>
+      <div id="select-zone" class="select-zone">
 
 
-      </footer>
-    </div>
+      </div>
+      <div class="card-hero-stats"></div>
+    </main>
 
-    <script src="js/mod03-e2_-_Champs_de_bataille.js"></script>
-  </body>
+    <div class="header"> Arena ?</div>
+
+    <footer class="footer">
+
+      <div id="selected-hero" class="selected-hero">
+      </div>
+
+      <div>
+        <button></button>
+        <button></button>
+      </div>
+
+
+    </footer>
+  </div>
+
+  <script src="js/mod03-e2_-_Champs_de_bataille.js"></script>
+</body>
+
 </html>
