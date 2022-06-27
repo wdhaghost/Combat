@@ -30,15 +30,28 @@ try {
         charactersList.appendChild(character)
 
       });
-      //
+      
 
+      const selectZone = document.getElementById("select-zone")
+      console.log(selectZone)
+      const selectedHero = document.getElementById("selected-hero")
 
-      const cards = document.querySelectorAll("#select-zone .card")
-      for (const card of cards) {
-        card.addEventListener("click", function (event) {
-         getPlayers(this)
-        })
-      }
+      selectZone.addEventListener("click",function(e){
+        if(e.target.classList.contains("card")) {
+          selectedHero.appendChild(e.target)
+        }if(e.target.parentElement.classList.contains("card")){
+          selectedHero.appendChild(e.target.parentElement)
+
+        }
+      })
+      selectedHero.addEventListener("click",function(e){
+        if(e.target.classList.contains("card")) {
+          selectZone.appendChild(e.target)
+        }if(e.target.parentElement.classList.contains("card")){
+          selectZone.appendChild(e.target.parentElement)
+
+        }
+      })
 
 
     })
@@ -47,10 +60,12 @@ try {
   console.error("Something went wrong : " + error);
 }
 
-function getPlayers(card) {
-  document.getElementById("selected-hero").appendChild(card)
-  card.removeEventListener()
-}
+
+
+
+
+
+
 // function getRandomValues(max) {
 //   return parseInt(Math.random() * max);
 // }
