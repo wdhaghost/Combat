@@ -8,6 +8,7 @@ try {
         let character = document.createElement("div")
         const name = hero.name
         character.setAttribute("data-id",hero.id)
+        character.setAttribute("data-universe",hero.biography.publisher)
         character.innerHTML += `<p>${name}</p>`
         character.classList.add("card")
 
@@ -17,8 +18,8 @@ try {
         character.appendChild(img)
 
         let stats = document.createElement("ul")
-        let universe = document.createElement("p")
-        //universe.innerHTML = hero.biography.publisher
+        
+        //universe.innerHTML 
 
 
         character.appendChild(universe)
@@ -39,7 +40,7 @@ try {
       const cards = document.querySelectorAll("#select-zone .card")
       for (const card of cards) {
         card.addEventListener("click", function (event) {
-          console.log(this.dataset.id)
+         getPlayers(this)
         })
       }
 
@@ -50,8 +51,9 @@ try {
   console.error("Something went wrong : " + error);
 }
 
-function getPlayers() {
-
+function getPlayers(card) {
+  document.getElementById("selected-hero").appendChild(card)
+  card.removeEventListener()
 }
 // function getRandomValues(max) {
 //   return parseInt(Math.random() * max);
