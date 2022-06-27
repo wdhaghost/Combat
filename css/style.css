@@ -1,8 +1,15 @@
+/* DISPLAY PAGE  */
+
 .container {
   display: grid;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   height: 100vh;
+  }
+
+  .header { 
+    background-color: #2CCED2;
+    grid-area: 1 / 6 / 7 / 9; 
   }
   
   .main { 
@@ -11,39 +18,50 @@
     padding: 2%;
     overflow: scroll;
   }
-  .select-zone{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 80%;
-  }
-  .stat-zone{
-    width: 20%;
-  }
-
-  .card{
-    background-color: white;
-    width:10%;
-    height: auto;
-    padding: 1% 2%;
-    border-radius: 10px;
-  }
-
-  .card-img{
-    height: auto;
-    width: 100%;
-  }
-  .card-stat{
-    display:none;
-  }
-
-  .header { 
-    background-color: #2CCED2;
-    grid-area: 1 / 6 / 7 / 9; 
-  }
 
   .footer { 
     background-color: #76CDCD;
     grid-area: 7 / 1 / 9 / 9; 
   } 
+
+
+
+/* CONTENT HEROES */
+
+.select-zone{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 80%;
+  height: 50vh;
+}
+
+.card{
+  background-color: white;
+  width:10%;
+  height: auto;
+  padding: 1% 2%;
+  border-radius: 10px;
+}
+
+.card-img{
+  height: auto;
+  width: 100%;
+}
+
+  .stat-zone{
+    width: 20%;
+  }
+
+  .card-stat{
+    display:none;
+  }
+
+
+/* DISPLAY FIGHTERS */
+  .selected-hero{
+    border: red solid 3px;
+    width: 70%;
+    height: 30vh;
+  }
