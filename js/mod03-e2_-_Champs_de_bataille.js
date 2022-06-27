@@ -7,8 +7,8 @@ try {
       heroes.forEach(hero => {
         let character = document.createElement("li")
         const name = hero.name
-        character.setAttribute("data-id",hero.id)
-        character.setAttribute("data-universe",hero.biography.publisher)
+        character.setAttribute("data-id", hero.id)
+        character.setAttribute("data-universe", hero.biography.publisher)
         character.innerHTML += `<p>${name}</p>`
         character.classList.add("card")
 
@@ -18,7 +18,7 @@ try {
         character.appendChild(img)
 
         let stats = document.createElement("ul")
-        
+
         for (const stat in hero.powerstats) {
           stats.innerHTML += `<li>${stat}:${hero.powerstats[stat]}</li>`
 
@@ -30,28 +30,38 @@ try {
         charactersList.appendChild(character)
 
       });
-      
+
 
       const selectZone = document.getElementById("select-zone")
-      console.log(selectZone)
+
       const selectedHero = document.getElementById("selected-hero")
 
-      selectZone.addEventListener("click",function(e){
-        if(e.target.classList.contains("card")) {
+      selectZone.addEventListener("click", function (e) {
+        if (e.target.classList.contains("card")) {
           selectedHero.appendChild(e.target)
-        }if(e.target.parentElement.classList.contains("card")){
+        } if (e.target.parentElement.classList.contains("card")) {
           selectedHero.appendChild(e.target.parentElement)
 
         }
       })
-      selectedHero.addEventListener("click",function(e){
-        if(e.target.classList.contains("card")) {
+      selectedHero.addEventListener("click", function (e) {
+        if (e.target.classList.contains("card")) {
           selectZone.appendChild(e.target)
-        }if(e.target.parentElement.classList.contains("card")){
+        } if (e.target.parentElement.classList.contains("card")) {
           selectZone.appendChild(e.target.parentElement)
 
         }
+
+
       })
+    // get 4 random players
+      document.getElementById("random").addEventListener("click", function (e) {
+        selectedHero.innerHTML=""
+        for (let i = 0; i < 4; i++) {
+          const randomNum=parseInt(Math.random()*selectZone.children.length) ;
+          selectedHero.appendChild(selectZone.childNodes[randomNum])
+        }}
+)
 
 
     })
@@ -60,6 +70,9 @@ try {
   console.error("Something went wrong : " + error);
 }
 
+function random() {
+
+}
 
 
 
