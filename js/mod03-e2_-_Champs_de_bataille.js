@@ -7,6 +7,7 @@ try {
       heroes.forEach(hero => {
         let character = document.createElement("div")
         const name = hero.name
+        character.setAttribute("data-id",hero.id)
         character.innerHTML += `<p>${name}</p>`
         character.classList.add("card")
 
@@ -32,14 +33,15 @@ try {
         charactersList.appendChild(character)
 
       });
-      const cards=document.querySelectorAll("#select-zone .card")
-      for (const card of cards) {
-       card.addEventListener("click",function(event){
-        
-      }) 
-      }
-      
+      //
 
+
+      const cards = document.querySelectorAll("#select-zone .card")
+      for (const card of cards) {
+        card.addEventListener("click", function (event) {
+          console.log(this.dataset.id)
+        })
+      }
 
 
     })
@@ -48,8 +50,9 @@ try {
   console.error("Something went wrong : " + error);
 }
 
+function getPlayers() {
 
-
+}
 // function getRandomValues(max) {
 //   return parseInt(Math.random() * max);
 // }
