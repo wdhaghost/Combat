@@ -69,6 +69,11 @@
     border:1px solid rgb(255, 255, 255) ;
     font-size:12px;
   }
+  .card.fight{
+    height:300px;
+
+  }
+
   .card:hover{
     background-color: rgb(255, 0, 0);
     border: 1px solid rgb(255, 255, 3);
