@@ -54,6 +54,17 @@ const arena=document.getElementById("fight-zone")
 const selectZone = document.getElementById("select-zone")
 const selectedHero = document.getElementById("selected-hero")
 
+
+selectZone.addEventListener("mouseover", function (e) {
+  document.getElementById("card-hero-stats").innerHTML = ""
+  if (e.target.classList.contains("card")) {
+    document.getElementById("card-hero-stats").appendChild(e.target.cloneNode(true));
+  } if (e.target.parentElement.classList.contains("card")) {
+    document.getElementById("card-hero-stats").appendChild(e.target.parentElement.cloneNode(true));
+    console.log(e.target.parentElement.cloneNode(true))
+  }
+})
+
 function targetSelectedHero(e){
   if (e.target.classList.contains("card")) {
     selectedHero.appendChild(e.target)
