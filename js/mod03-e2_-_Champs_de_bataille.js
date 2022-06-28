@@ -1,9 +1,9 @@
-let charactersList = document.getElementById("select-zone");
 
 try {
   fetch("https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json")
     .then(response => response.json())
     .then(heroes => {
+      
       heroes.forEach(hero => {
         let character = document.createElement("li")
         const name = hero.name
@@ -29,7 +29,7 @@ try {
         character.appendChild(stats)
 
       
-        charactersList.appendChild(character)
+        selectZone.appendChild(character)
 
       });
 
@@ -40,6 +40,7 @@ try {
       document.getElementById("random").addEventListener("click",randomPlayers)
 
       document.getElementById("fight").addEventListener("click",toArena)
+      
       
   
       
