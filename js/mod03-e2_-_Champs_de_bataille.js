@@ -60,8 +60,8 @@ selectZone.addEventListener("mouseover", function (e) {
   if (e.target.classList.contains("card")) {
     document.getElementById("card-hero-stats").appendChild(e.target.cloneNode(true));
   } if (e.target.parentElement.classList.contains("card")) {
-    document.getElementById("card-hero-stats").appendChild(e.target.parentElement.cloneNode(true));
-    console.log(e.target.parentElement.cloneNode(true))
+    document.getElementById("card-hero-stats").appendChild(e.target.parentElement.cloneNode());
+    console.log(e.target.parentElement.cloneNode())
   }
 })
 
